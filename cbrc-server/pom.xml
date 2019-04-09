@@ -26,7 +26,11 @@
             <artifactId>protocol</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
+        <!--<dependency>-->
+            <!--<groupId>com.thh.2pc</groupId>-->
+            <!--<artifactId>bank-common</artifactId>-->
+            <!--<version>1.0-SNAPSHOT</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>

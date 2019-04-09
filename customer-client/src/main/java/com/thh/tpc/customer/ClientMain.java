@@ -31,17 +31,24 @@ public class ClientMain {
     }
 
     public static void main(String[] args) {
-        if (args.length < 5) {
-            usage();
-            System.exit(1);
-        }
+//        if (args.length < 5) {
+//            usage();
+//            System.exit(1);
+//        }
 
         init();
-        final String fromBank = args[0];
-        final String fromAccount = args[1];
-        final String toBank = args[2];
-        final String toAccount = args[3];
-        final String amount = args[4];
+//        final String fromBank = args[0];
+//        final String fromAccount = args[1];
+//        final String toBank = args[2];
+//        final String toAccount = args[3];
+//        final String amount = args[4];
+//        BOC 1 CCB 2 2000
+        final String fromBank = "BOC";
+        final String fromAccount = "1";
+        final String toBank = "CBRC";
+        final String toAccount = "3";
+        final String amount = "2000";
+
 
         if (!bankNames.contains(fromBank) || !bankNames.contains(toBank)) {
             System.err.println("转入银行或转出银行名称有误! 目前只支持: " + String.join(",", bankNames));
@@ -78,8 +85,11 @@ public class ClientMain {
     }
 
     private static void init() {
-        final List<Node> testNodes = TestUtil.getTestNodes();bankNames.add("BOC");
-        bankNames.add("CCB");
+        final List<Node> testNodes = TestUtil.getTestNodes();
+        bankNames.add("BOC");
+//        bankNames.add("CCB");
+        bankNames.add("CBRC");
+
         for (Node testNode : testNodes) {
             participants.put(testNode.name(), testNode);
         }
